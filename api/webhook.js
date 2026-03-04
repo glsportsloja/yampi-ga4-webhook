@@ -5,6 +5,7 @@ export default async function handler(req, res) {
 
   try {
     const body = req.body;
+    console.log(JSON.stringify(body, null, 2));
 
     const orderId = body?.id || body?.order_id || Date.now();
     const value = body?.total || body?.amount || 0;
